@@ -6,6 +6,8 @@
 /_/  /_/\___/\____/|__/|__/_/ /_/\____/\____/_/|_|  
                                                     
 ```
+> ***voice is our medium. code is our claws.***  
+> the server purrs when we speak. the channel bends when we arrive.
 
 
 
