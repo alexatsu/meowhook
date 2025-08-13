@@ -16,7 +16,7 @@
   },
   "license": "BSD-2-Clause",
   "author": "x44annie",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.ts",
   "dependencies": {
     "discord.js": "^14.21.0"
