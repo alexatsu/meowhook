@@ -3,43 +3,42 @@ import tseslint from 'typescript-eslint'
 import prettier from 'eslint-config-prettier'
 
 export default tseslint.config(
-  {
-    ignores: ['**/node_modules/**', '**/dist/**', '**/build/**', '**/.next/**'],
-  },
-  js.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
-  prettier,
-  {
-    languageOptions: {
-      parserOptions: {
-        project: true,
-        tsconfigRootDir: import.meta.dirname,
-      },
+    {
+        ignores: ['**/node_modules/**', '**/dist/**', '**/build/**'],
     },
-    rules: {
-      // TypeScript
-      '@typescript-eslint/no-unused-vars': [
-        'error',
-        { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
-      ],
-      '@typescript-eslint/consistent-type-imports': [
-        'error',
-        { prefer: 'type-imports', fixStyle: 'separate-type-imports' },
-      ],
-      '@typescript-eslint/no-import-type-side-effects': 'error',
-      '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
-      '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
+    js.configs.recommended,
+    ...tseslint.configs.recommendedTypeChecked,
+    prettier,
+    {
+        languageOptions: {
+            parserOptions: {
+                project: true,
+                tsconfigRootDir: import.meta.dirname,
+            },
+        },
+        rules: {
+            // TypeScript
+            '@typescript-eslint/no-unused-vars': [
+                'error',
+                { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+            ],
+            '@typescript-eslint/consistent-type-imports': [
+                'error',
+                { prefer: 'type-imports', fixStyle: 'separate-type-imports' },
+            ],
+            '@typescript-eslint/no-import-type-side-effects': 'error',
+            '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+            '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
 
-      // General
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
-      'prefer-const': 'error',
-      'object-shorthand': 'error',
-      'prefer-template': 'error',
+            // General
+            'no-console': ['warn', { allow: ['warn', 'error'] }],
+            'prefer-const': 'error',
+            'object-shorthand': 'error',
+            'prefer-template': 'error',
+        },
     },
-  },
-  {
-    files: ['**/*.js', '**/*.mjs'],
-    ...tseslint.configs.disableTypeChecked,
-  },
+    {
+        files: ['**/*.js', '**/*.mjs'],
+        ...tseslint.configs.disableTypeChecked,
+    },
 )
