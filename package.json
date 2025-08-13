@@ -17,8 +17,9 @@
   "license": "BSD-2-Clause",
   "author": "x44annie",
   "type": "module",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "dependencies": {
+    "discord-api-types": "^0.38.19",
     "discord.js": "^14.21.0"
   },
   "scripts": {
