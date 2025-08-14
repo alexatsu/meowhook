@@ -35,6 +35,7 @@ export default tseslint.config(
             'prefer-const': 'error',
             'object-shorthand': 'error',
             'prefer-template': 'error',
+            '@typescript-eslint/no-misused-promises': [0],
         },
     },
     {

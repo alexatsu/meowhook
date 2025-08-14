@@ -1,18 +1,9 @@
-// Require the necessary discord.js classes
-import { Client, Events, GatewayIntentBits } from 'discord.js'
 import 'dotenv/config'
+import { client } from '@/shared/client'
+import { registerAllEvents } from '@/events'
+import { validateEnvVars } from '@/shared/config/env-check'
 
-// Create a new client instance
-const client = new Client({ intents: [GatewayIntentBits.Guilds] })
+validateEnvVars()
+registerAllEvents()
 
-// When the client is ready, run this code (only once).
-// The distinction between `client: Client<boolean>` and `readyClient: Client<true>` is important for TypeScript developers.
-// It makes some properties non-nullable.
-client.once(Events.ClientReady, readyClient => {
-    console.log(`Ready! Logged in as ${readyClient.user.tag}`)
-    console.log(process.env.TOKEN)
-})
-
-// Log in to Discord with your client's token
 await client.login(process.env.TOKEN)
-
