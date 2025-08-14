@@ -21,30 +21,7 @@ We are:
 * 🖤 watchers of the voice void
 * 🕷 channel conjurers with `/createvc`
 * ☁️ weather-witches reading API skies
-* 🩶 archivists of your profile lore
-
----
-
-## ⚔️ what we make
-
-* 🦴 voice channels that spawn from nothing
-* 🌡 temperature spells that fetch the now
-* 🕶 personal profiles that reveal your voice-time story
-* ⏱ trackers that remember your hours, your longest stay, your patterns
-
----
-
-## 💻 commands
-
-* `/createvc` — conjure a fresh voice channel
-* `/temperature <city>` — feel the weather beyond the glass
-* `/profile` — reveal your full voice and activity profile:
-    - total hours in voice channels
-    - longest session
-    - last active date
-    - other personal stats
-* `/leaderboard` — find your place among the talkers
-
+* 🩶 archivists of logs
 
 ---
 
